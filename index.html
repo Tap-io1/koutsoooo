@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Madeira Barbershop | Περιστέρι</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #c2c0c0;
+            color: #111111;
+
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+
+            padding: 35px 18px 30px;
+
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+
+        /* =========================
+           MAIN CONTAINER
+        ========================= */
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+
+            text-align: center;
+        }
+
+
+        /* =========================
+           LOGO IMAGE
+        ========================= */
+
+        .logo {
+            width: 100%;
+            max-width: 430px;
+
+            height: auto;
+
+            display: block;
+
+            margin: 0 auto;
+
+            /* Η εικόνα έχει το ίδιο γκρι background,
+               οπότε φαίνεται σαν να είναι μέρος της σελίδας */
+        }
+
+
+        /* =========================
+           ADDRESS
+        ========================= */
+
+        .address {
+            margin-top: -45px;
+
+            margin-bottom: 45px;
+
+            font-size: 0.95rem;
+
+            font-weight: 400;
+
+            color: #555555;
+
+            letter-spacing: 0.2px;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .links-container {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 15px;
+        }
+
+
+        .btn {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: flex-start;
+
+            width: 100%;
+
+            min-height: 82px;
+
+            padding: 16px 22px;
+
+            background-color: #1b1b19;
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            font-size: 1rem;
+
+            font-weight: 600;
+
+            border-radius: 14px;
+
+            border: 1px solid #151515;
+
+            box-shadow:
+                0 7px 12px rgba(0, 0, 0, 0.20);
+
+            transition: all 0.2s ease;
+        }
+
+
+        .btn:hover {
+            background-color: #262624;
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 10px 17px rgba(0, 0, 0, 0.25);
+        }
+
+
+        .btn:active {
+            transform: translateY(1px);
+
+            box-shadow:
+                0 4px 7px rgba(0, 0, 0, 0.20);
+        }
+
+
+        /* =========================
+           ICON
+        ========================= */
+
+        .icon {
+            width: 42px;
+
+            min-width: 42px;
+
+            height: 42px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin-right: 17px;
+
+            color: #ffffff;
+
+            font-size: 1.8rem;
+
+            line-height: 1;
+        }
+
+
+        .btn-text {
+            text-align: left;
+
+            flex: 1;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+            margin-top: 45px;
+
+            font-size: 0.72rem;
+
+            color: #555555;
+
+            opacity: 0.85;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 25px 16px 25px;
+            }
+
+
+            .logo {
+                width: 105%;
+
+                max-width: none;
+
+                margin-left: -2.5%;
+            }
+
+
+            .address {
+                margin-top: -32px;
+
+                margin-bottom: 35px;
+
+                font-size: 0.88rem;
+            }
+
+
+            .links-container {
+                gap: 13px;
+            }
+
+
+            .btn {
+                min-height: 78px;
+
+                padding: 15px 17px;
+
+                font-size: 0.94rem;
+
+                border-radius: 13px;
+            }
+
+
+            .icon {
+                width: 37px;
+
+                min-width: 37px;
+
+                height: 37px;
+
+                margin-right: 14px;
+
+                font-size: 1.6rem;
+            }
+
+
+            .footer {
+                margin-top: 40px;
+
+                font-size: 0.68rem;
+            }
+        }
+
+
+        /* =========================
+           SMALL PHONES
+        ========================= */
+
+        @media (max-width: 380px) {
+
+            .logo {
+                width: 110%;
+
+                margin-left: -5%;
+            }
+
+
+            .address {
+                margin-top: -28px;
+
+                font-size: 0.82rem;
+            }
+
+
+            .btn {
+                font-size: 0.88rem;
+
+                padding-left: 13px;
+
+                padding-right: 13px;
+            }
+
+
+            .icon {
+                width: 32px;
+
+                min-width: 32px;
+
+                margin-right: 10px;
+
+                font-size: 1.45rem;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container">
+
+
+        <!-- =========================
+             MADEIRA LOGO IMAGE
+             
+             Βάλε το αρχείο madeira-logo.png
+             στον ίδιο φάκελο με το index.html
+        ========================= -->
+
+        <img
+            src="madeira-logo.png"
+            alt="Madeira Barbershop"
+            class="logo"
+        >
+
+
+        <!-- ADDRESS -->
+
+        <div class="address">
+            Βασιλέως Αλεξάνδρου 118, Περιστέρι
+        </div>
+
+
+
+        <!-- =========================
+             BUTTONS
+        ========================= -->
+
+        <div class="links-container">
+
+
+            <!-- GOOGLE REVIEW -->
+
+            <a
+                href="https://search.google.com/local/writereview?placeid=ChIJrVnKVQCjoRQRlnzx7m82lHc"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn"
+            >
+
+                <span class="icon">★</span>
+
+                <span class="btn-text">
+                    Αξιολογήστε μας στο Google
+                </span>
+
+            </a>
+
+
+
+            <!-- INSTAGRAM -->
+
+            <a
+                href="https://www.instagram.com/madeira_barbershop.ath?igsh=MTFkd2s3bGsyazBqcg==&igsi=MTFkd2s3bGsyazBqcg=="
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn"
+            >
+
+                <span class="icon">◎</span>
+
+                <span class="btn-text">
+                    Βρείτε μας στο Instagram
+                </span>
+
+            </a>
+
+
+
+            <!-- APPOINTMENT -->
+
+            <a
+                href="https://www.ebarber.gr/barbershops/madeira-barbershop"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn"
+            >
+
+                <span class="icon">▣</span>
+
+                <span class="btn-text">
+                    Κλείστε το επόμενο σας ραντεβού
+                </span>
+
+            </a>
+
+
+
+            <!-- GOOGLE MAPS -->
+
+            <a
+                href="https://maps.google.com/?q=Βασιλέως+Αλεξάνδρου+118,+Περιστέρι"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn"
+            >
+
+                <span class="icon">●</span>
+
+                <span class="btn-text">
+                    Τοποθεσία στο Google Maps
+                </span>
+
+            </a>
+
+
+
+            <!-- PHONE -->
+
+            <a
+                href="tel:6988292055"
+                class="btn"
+            >
+
+                <span class="icon">⌕</span>
+
+                <span class="btn-text">
+                    Καλέστε μας
+                </span>
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- FOOTER -->
+
+        <div class="footer">
+
+            &copy; Madeira Barbershop. All rights reserved.
+
+        </div>
+
+
+    </div>
+
+</body>
+</html>
